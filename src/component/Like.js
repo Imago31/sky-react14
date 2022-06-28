@@ -1,11 +1,15 @@
 import { connect } from 'react-redux'
+import Title from './Title'
 
 function Likes(props) {
   console.log('render>', props)
   return (
-    <div className="button-controls">
-      <button onClick={props.onIncrement}> ❤ {props.likes} </button>
-      <button onClick={props.onDecrement}>Dislike</button>
+    <div>
+      <Title />
+      <div className="button-controls">
+        <button onClick={props.onIncrement}> ❤ {props.likes} </button>
+        <button onClick={props.onDecrement}>Dislike</button>
+      </div>
     </div>
   )
 }
