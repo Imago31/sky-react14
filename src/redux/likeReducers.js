@@ -1,8 +1,11 @@
 import { DECREMENT } from './types'
 import { INCREMENT } from './types'
+import { INPUT } from './types'
 
 const initialState = {
   likes: 0,
+  title: 'My picture',
+  input: ''
 }
 
 export const likeReducer = (state = initialState, action) => {
@@ -19,6 +22,11 @@ export const likeReducer = (state = initialState, action) => {
         ...state,
         likes: state.likes - 1,
       }
+      case INPUT:
+        return {
+          ...state,
+          input: action.input,
+        }
     default:
       return state
   }

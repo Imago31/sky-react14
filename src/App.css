@@ -51,7 +51,8 @@
 }
 .card-title-top {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+
 }
 .card-title-top p {
   margin: 0 5px;
